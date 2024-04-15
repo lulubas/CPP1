@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 11:52:23 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 16:41:30 by lbastien         ###   ########.fr       */
+/*   Created: 2024/04/15 17:28:52 by lbastien          #+#    #+#             */
+/*   Updated: 2024/04/15 18:12:22 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-int	main( void ) {
-	Zombie*	zombies;
+#include <string>
+
+class Weapon {
+	public:
+		Weapon();
+		Weapon( std::string type);
+		~Weapon();
+
+		std::string getType( void );
+		void setType( std::string newType);
 	
-	std::cout << "Generating a 5-zombies horde:" << std::endl;
-	zombies = zombieHorde(5, "iAmZombie");
-	delete[] zombies;
-	return( 0 );
-}
+	private:
+		std::string _type;
+};
+
+#endif

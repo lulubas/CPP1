@@ -6,7 +6,7 @@
 #    By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/27 17:07:24 by lbastien          #+#    #+#              #
-#    Updated: 2024/04/15 17:15:46 by lbastien         ###   ########.fr        #
+#    Updated: 2024/04/15 17:12:08 by lbastien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,10 @@ CXX = g++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 # Target executable name
-TARGET = zombie
+TARGET = brain
 
 # Source, Object, Dependency files
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 DEP = $(OBJ:.o=.d)
 

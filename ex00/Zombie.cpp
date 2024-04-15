@@ -6,11 +6,13 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 10:45:01 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 12:02:30 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/15 17:34:51 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie() {}
 
 Zombie::Zombie(std::string name) : _name(name) {}
 

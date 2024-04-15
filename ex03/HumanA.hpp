@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 11:52:23 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 16:41:30 by lbastien         ###   ########.fr       */
+/*   Created: 2024/04/15 17:39:25 by lbastien          #+#    #+#             */
+/*   Updated: 2024/04/15 18:05:48 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-int	main( void ) {
-	Zombie*	zombies;
-	
-	std::cout << "Generating a 5-zombies horde:" << std::endl;
-	zombies = zombieHorde(5, "iAmZombie");
-	delete[] zombies;
-	return( 0 );
-}
+#include <string>
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanA {
+	public:
+		HumanA();
+		HumanA(std::string name, Weapon weapon );
+		void	attack();
+		
+	private:
+		std::string _name;
+		Weapon _weapon;
+};
+
+#endif

@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 10:44:21 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 11:47:58 by lbastien         ###   ########.fr       */
+/*   Created: 2024/04/15 17:26:56 by lbastien          #+#    #+#             */
+/*   Updated: 2024/04/15 18:10:46 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#ifndef WEAPON_H
+#define WEAPON_H
 
-Zombie*	newZombie( std::string name ) {
-	return ( new Zombie(name) );
-}
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+
+#endif
