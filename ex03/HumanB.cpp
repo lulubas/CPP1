@@ -6,12 +6,9 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:56:41 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 18:06:26 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/16 03:28:08 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef HUMAN_B
-#define HUMAN_B
 
 #include "HumanB.hpp"
 
@@ -26,5 +23,3 @@ void	HumanB::attack( void ) {
 void HumanB::setWeapon( Weapon weapon) {
 	_weapon = weapon;
 }
-
-#endif

@@ -6,9 +6,12 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:57:09 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 18:11:20 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/16 03:28:56 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
 #include <string>
 #include <iostream>
@@ -25,3 +28,5 @@ class HumanB {
 		std::string _name;
 		Weapon _weapon;
 };
+
+#endif

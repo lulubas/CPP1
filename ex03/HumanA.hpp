@@ -6,12 +6,12 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:39:25 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 18:05:48 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/16 03:28:44 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include <string>
 #include <iostream>
