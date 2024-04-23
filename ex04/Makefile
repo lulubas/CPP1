@@ -6,7 +6,7 @@
 #    By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/27 17:07:24 by lbastien          #+#    #+#              #
-#    Updated: 2024/04/22 19:08:40 by lbastien         ###   ########.fr        #
+#    Updated: 2024/04/23 02:51:19 by lbastien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,19 +15,19 @@ CXX = g++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 # Target executable name
-TARGET = weapon
+TARGET = sed
 
 # Source, Object, Dependency files
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp myFile.cpp replaceString.cpp
 OBJ = $(SRC:.cpp=.o)
 DEP = $(OBJ:.o=.d)
 
 # Default target
 all: $(TARGET)
 
-# Run target
+# Run target ignoring exit status
 run: all
-	./$(TARGET)
+	-@./$(TARGET)
 
 # Compile .cpp files into .o object files
 %.o : %.cpp

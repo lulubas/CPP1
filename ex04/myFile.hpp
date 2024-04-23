@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   myFile.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 17:39:25 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/16 13:22:18 by lbastien         ###   ########.fr       */
+/*   Created: 2024/04/22 19:38:26 by lbastien          #+#    #+#             */
+/*   Updated: 2024/04/22 23:59:17 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#ifndef MYFILE_HPP
+#define MYFILE_HPP
 
-#include <string>
 #include <iostream>
-#include "Weapon.hpp"
+#include <fstream>
+#include <string>
 
-class HumanA {
+class myFile {
 	public:
-		HumanA( std::string name, Weapon& weapon );
-		~HumanA();
-		void	attack();
-		
+		myFile();
+		~myFile();
+
+		std::string	getContent( void );
+		void 		setContent( std::string content );
+		void 		readFile( std::string path );
+		void 		writeFile( std::string path );
+
 	private:
-		std::string _name;
-		Weapon& _weapon;
+		std::string _filepath;
+		std::string _content;
+		void _parseContent( std::string path );
 };
 
-#endif
+#endif /* MYFILE_HPP */
