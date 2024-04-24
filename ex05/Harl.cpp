@@ -6,17 +6,17 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:32:42 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/24 02:39:29 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/24 03:22:18 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl() {
-	ftMap["DEBUG"] = &Harl::_debug;
-	ftMap["INFO"] = &Harl::_info;
-	ftMap["WARNING"] = &Harl::_warning;
-	ftMap["ERROR"] = &Harl::_error;
+	_ftMap["DEBUG"] = &Harl::_debug;
+	_ftMap["INFO"] = &Harl::_info;
+	_ftMap["WARNING"] = &Harl::_warning;
+	_ftMap["ERROR"] = &Harl::_error;
 }
 Harl::~Harl() {}
 
@@ -25,9 +25,8 @@ void Harl::complain( std::string level) {
 		void (Harl::*ft)() = _ftMap[ level ];
 		(this->*ft)();
 	}
-	else {
-		std::cout << "Wrong compalin level" << std::endl;
-	}
+	else
+		std::cout << "Wrong complain level" << std::endl;
 }
 
 void Harl::_debug( void ) {
