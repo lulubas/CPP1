@@ -6,7 +6,7 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:36:00 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/23 18:04:01 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/24 02:40:31 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Harl {
 	public:
 		Harl();
 		~Harl();
-		
 		void	complain( std::string level );
 
 	private:
@@ -29,7 +28,7 @@ class Harl {
 		void	_info( void );
 		void	_warning( void );
 		void	_error( void );
-		std::map<std::string, void (Harl::*)()> ftMap;
-}
+		std::map <std::string, void (Harl::*)()> _ftMap;
+};
 
 #endif /* HARL_H */

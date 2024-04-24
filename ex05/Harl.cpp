@@ -6,7 +6,7 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:32:42 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/23 18:07:13 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/04/24 02:39:29 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ Harl::Harl() {
 Harl::~Harl() {}
 
 void Harl::complain( std::string level) {
+	if (_ftMap.find( level ) != _ftMap.end()) {
+		void (Harl::*ft)() = _ftMap[ level ];
+		(this->*ft)();
+	}
+	else {
+		std::cout << "Wrong compalin level" << std::endl;
+	}
 }
 
 void Harl::_debug( void ) {
