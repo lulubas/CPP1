@@ -6,7 +6,7 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:36:00 by lbastien          #+#    #+#             */
-/*   Updated: 2024/08/03 23:36:39 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:21:12 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,13 @@ class Harl {
 		void	_info(void);
 		void	_warning(void);
 		void	_error(void);
-		std::map <std::string, void (Harl::*)()> _ftMap;
+
+		struct Complaint {
+			std::string level;
+			void (Harl::*fct)(void);
+		};
+
+		static const Complaint _complaints[];
 };
 
 #endif /* HARL_H */

@@ -6,7 +6,7 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:55:20 by lbastien          #+#    #+#             */
-/*   Updated: 2024/08/03 23:54:52 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/08/22 16:21:55 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void myFile::readFile(std::string path) {
 
 void myFile::_parseContent(std::string path) {
 	std::string		buffer;
-	std::ifstream	inputFile(path);
+	std::ifstream	inputFile(path.c_str());
 
 	if (!inputFile.is_open()) {
 		std::cerr << "Error while opening" << path << std::endl;
-		exit (1);
+		return ;
 	}
 
 	while (inputFile.good()) {
@@ -43,7 +43,7 @@ void myFile::_parseContent(std::string path) {
 }
 
 void myFile::writeFile(std::string path) {
-	std::ofstream outputFile(path);
+	std::ofstream outputFile(path.c_str());
 	outputFile << _content;
 }
 
