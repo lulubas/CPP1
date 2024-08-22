@@ -6,7 +6,7 @@
 #    By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/27 17:07:24 by lbastien          #+#    #+#              #
-#    Updated: 2024/04/15 17:15:46 by lbastien         ###   ########.fr        #
+#    Updated: 2024/08/04 02:41:18 by lbastien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ clean:
 	
 #Also clean up the target executable
 fclean: clean
-	rm $(TARGET)
+	rm -f $(TARGET)
 
 #Clean up and recompile
 re: fclean all

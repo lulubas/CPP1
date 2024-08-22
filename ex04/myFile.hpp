@@ -22,15 +22,15 @@ class myFile {
 		myFile();
 		~myFile();
 
-		std::string	getContent( void );
-		void 		setContent( std::string content );
-		void 		readFile( std::string path );
-		void 		writeFile( std::string path );
+		std::string	getContent(void);
+		void 		setContent(std::string content);
+		void 		readFile(std::string path);
+		void 		writeFile(std::string path);
 
 	private:
 		std::string _filepath;
 		std::string _content;
-		void _parseContent( std::string path );
+		void _parseContent(std::string path);
 };
 
-#endif /* MYFILE_HPP */
+#endif

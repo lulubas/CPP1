@@ -6,7 +6,7 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:39:25 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/16 13:22:18 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/08/03 22:36:06 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 
 class HumanA {
 	public:
-		HumanA( std::string name, Weapon& weapon );
+		HumanA(std::string name, Weapon& weapon);
 		~HumanA();
+		
 		void	attack();
 		
 	private:

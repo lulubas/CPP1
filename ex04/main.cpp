@@ -6,33 +6,35 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:19:51 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/23 02:48:00 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/08/04 02:41:48 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sed.h"
 
-int	main( int argc, char **argv )
+int	main(int argc, char **argv)
 {
+	if (argc != 4) {
+		std::cout << "Wrong number of arguments" << std::endl;
+		std::cout << "Try the following command: " << std::endl << std::endl;
+		std::cout << "echo \"Hello\\nReplacing the world Hello\\nIn this Hello text\" > thefile && ./sed thefile Hello Goodbye" << std::endl << std::endl;
+		return (1);
+	}
+	
 	std::string oldContent;
 	std::string newContent;
 	myFile		oldFile;
 	myFile		newFile;
 
-	if ( argc != 4 ) {
-		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-
-	std::string filepath( argv[1] );
-	std::string oldString( argv[2] );
-	std::string newString( argv[3] );
+	std::string filepath(argv[1]);
+	std::string oldString(argv[2]);
+	std::string newString(argv[3]);
 	std::string newFilepath = filepath + ".replace";
-	
-	oldFile.readFile( filepath );
+
+	oldFile.readFile(filepath);
 	oldContent = oldFile.getContent();
-	newContent = replaceString( oldContent, oldString, newString );
-	newFile.setContent( newContent );
-	newFile.writeFile( newFilepath );
+	newContent = replaceString(oldContent, oldString, newString);
+	newFile.setContent(newContent);
+	newFile.writeFile(newFilepath);
 	return (0);
 }

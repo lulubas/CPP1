@@ -6,12 +6,12 @@
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 10:44:21 by lbastien          #+#    #+#             */
-/*   Updated: 2024/04/15 11:47:58 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/08/03 23:36:39 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.h"
 
-Zombie*	newZombie( std::string name ) {
-	return ( new Zombie(name) );
+Zombie*	newZombie(std::string name) {
+	return (new Zombie(name));
 }
